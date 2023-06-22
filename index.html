@@ -1,0 +1,35 @@
+<html>
+<head>
+  <title>Calculadora</title>
+  <script>
+    function calcular() {
+      var num1 = parseFloat(document.getElementById("num1").value);
+      var num2 = parseFloat(document.getElementById("num2").value);
+      
+      var resultadoSoma = num1 + num2;
+      var resultadoSubtracao = num1 - num2;
+      var resultadoMultiplicacao = num1 * num2;
+      var resultadoDivisao = num1 / num2;
+      var resultadoRestoDivisao = num1 % num2;
+      
+      document.getElementById("resultado-soma").innerHTML = "Soma: " + resultadoSoma;
+      document.getElementById("resultado-subtracao").innerHTML = "Subtração: " + resultadoSubtracao;
+      document.getElementById("resultado-multiplicacao").innerHTML = "Multiplicação: " + resultadoMultiplicacao;
+      document.getElementById("resultado-divisao").innerHTML = "Divisão: " + resultadoDivisao;
+      document.getElementById("resultado-resto").innerHTML = "Resto da Divisão: " + resultadoRestoDivisao;
+    }
+  </script>
+</head>
+<body>
+  <h1>Calculadora</h1>
+  <input type="text" id="num1" placeholder="Digite o primeiro número"><br>
+  <input type="text" id="num2" placeholder="Digite o segundo número"><br>
+  <button onclick="calcular()">Calcular</button><br><br>
+  
+  <p id="resultado-soma"></p>
+  <p id="resultado-subtracao"></p>
+  <p id="resultado-multiplicacao"></p>
+  <p id="resultado-divisao"></p>
+  <p id="resultado-resto"></p>
+</body>
+</html>
